@@ -1,63 +1,18 @@
 import 'package:flutter/material.dart';
 
 class ColorManager {
-  // primary
- static const yellow = Color(0xFF6C62FF);
- // static const yellow = Color(0xFFffb900);
- // error
- static const red = Color(0xFFfe0000);
-// ---------------------------------------
-
- // light
- // scaffold bg - button icons - card -
- static const white = Color(0xFFffffff);
-
- // secondary color - bottom navigation bar unselected icons - splash color
- static const grey3 = Color(0xFF666666);
-
- // text field bg - card shadow - disable buttons
- static const grey = Color(0xFFededed);
-
- // elevated button - text - light accent color
- static const black = Color(0xFF000000);
-
-// icons - text field icons -
- static const black1 = Color(0xFF282828);
-
- // bottom navigation bar bg -
- static const grey4 = Color(0xFFf3f1f2);
-
- // text filed hint
- static const grey5 = Color(0xFF6c6d6f);
-
-
-// -------------------------------------------
-
-// dark
-// scaffold bg
-  static const black2 = Color(0xFF121212);
-
-// text field bg - shadow color - splash color - disable
- static const grey2 = Color(0xFF37383a);
-
- // icons - text field icons - dark accent color -
- static const white2 = Color(0xFFededed);
-
- // bottom nav bar bg - enable border
- static const grey6 = Color(0xFF211f20);
-
- // unselected bottom nav bar icon -
- static const grey7 = Color(0xFFa3a3a3);
-
- // text field hint style
- static const grey8 = Color(0xFF898a8c);
-
-
-
-
-
-
-
+ static const primaryColor = Color(0xFF6C62FF);
+ static const secondaryColor = Color(0xFF020F6F);
+ static const iconsColor = Color(0xFFAFAEBE);
+ static const backgroundColor = Color(0xFFF5F6FA);
+ static const whiteColor = Color(0xFFFFFFFF);
+ static const complementaryColor = Color(0xFFFF62A5);
+ static const blackTextColor = Color(0xFF000000);
+ static const grey1 = Color(0xFFC0C0C0);
+ static const disableColor = Color(0xFFF3F3F5);
+ static const errorColor = Color(0xFFF11414);
+ static const arrowBackIconColor = Color(0xFF8B97A7);
+ static const primaryGradient = Color(0xFFB681FF);
 
 
   // darkColor_lightColor

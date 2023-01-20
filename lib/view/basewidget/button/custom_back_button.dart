@@ -1,0 +1,31 @@
+import 'package:daif_customer/utill/color_manager.dart';
+import 'package:daif_customer/utill/values_manager.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+
+class CustomBackButton extends StatelessWidget {
+  const CustomBackButton({Key? key, this.onPressed}) : super(key: key);
+final VoidCallback? onPressed;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 40.w,
+      height: 40.w,
+      child: OutlinedButton(
+        style: OutlinedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(ValuesManager.border),
+            ),
+            side: const BorderSide(
+                color: ColorManager.arrowBackIconColor, width: 0.7),
+            ),
+        onPressed:onPressed??() => Navigator.of(context).pop(),
+        child: const Icon(
+          Icons.arrow_back_ios,
+          color: ColorManager.arrowBackIconColor,
+        ),
+      ),
+    );
+  }
+}

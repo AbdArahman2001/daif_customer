@@ -1,3 +1,4 @@
+import 'package:daif_customer/view/screens/onboarding/screen/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -25,12 +26,11 @@ class MyApp extends StatelessWidget {
 
     return ScreenUtilInit(
         // TODO check your device size
-        designSize: const Size(392, 781),
+        designSize: const Size(375, 812),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) => GetMaterialApp(
           themeMode: ThemeMode.dark,
-              darkTheme: getDarkTheme(),
               theme: getLightTheme(),
               debugShowCheckedModeBanner: false,
               locale: L10n.all.first,
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate
               ],
-              home:  Scaffold(),
+              home:  OnBoardingScreen(),
             ));
   }
 }

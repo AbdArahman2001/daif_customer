@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FontConstants {
-  static const String fontFamily = "Urbanist";
+  static const String fontFamily = "Poppins";
 }
 
 class FontWeightManager {
@@ -18,8 +18,10 @@ class FontWeightManager {
 }
 
 class FontSize {
+  static  double s8 = 8.0.sp;
   static  double s10 = 10.0.sp;
   static  double s12 = 12.0.sp;
+  static  double s13 = 13.0.sp;
   static  double s14 = 14.0.sp;
   static  double s16 = 16.0.sp;
   static  double s17 = 17.0.sp;
@@ -27,6 +29,7 @@ class FontSize {
   static  double s20 = 20.0.sp;
   static  double s22 = 22.0.sp;
   static  double s24 = 24.0.sp;
+  static  double s25 = 25.0.sp;
   static  double s32 = 32.0.sp;
   static  double s40 = 40.0.sp;
   static  double s48 = 48.0.sp;

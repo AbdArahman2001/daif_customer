@@ -123,12 +123,20 @@ TextStyle style_600_10(Color color) {
 TextStyle style_500_18(Color color) {
   return getMediumStyle(fontSize: FontSize.s18, color: color);
 }
+
+TextStyle style_500_17(Color color) {
+  return getMediumStyle(fontSize: FontSize.s17, color: color);
+}
+
 TextStyle style_500_16(Color color) {
   return getMediumStyle(fontSize: FontSize.s16, color: color);
 }
 
 TextStyle style_500_14(Color color) {
   return getMediumStyle(fontSize: FontSize.s14, color: color);
+}
+TextStyle style_500_13(Color color) {
+  return getMediumStyle(fontSize: FontSize.s13, color: color);
 }
 
 TextStyle style_500_12(Color color) {
@@ -139,6 +147,9 @@ TextStyle style_500_10(Color color) {
   return getMediumStyle(fontSize: FontSize.s10, color: color);
 }
 
+TextStyle style_400_25(Color color) {
+  return getRegularStyle(fontSize: FontSize.s25, color: color);
+}
 TextStyle style_400_18(Color color) {
   return getRegularStyle(fontSize: FontSize.s18, color: color);
 }
@@ -153,4 +164,7 @@ TextStyle style_400_14(Color color) {
 
 TextStyle style_400_12(Color color) {
   return getRegularStyle(fontSize: FontSize.s12, color: color);
+}
+TextStyle style_400_8(Color color) {
+  return getRegularStyle(fontSize: FontSize.s8, color: color);
 }
