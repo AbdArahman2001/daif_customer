@@ -103,6 +103,9 @@ TextStyle style_700_14(Color color) {
 TextStyle style_700_10(Color color) {
   return getBoldStyle(fontSize: FontSize.s10, color: color);
 }
+TextStyle style_600_22(Color color) {
+  return getSemiBoldStyle(fontSize: FontSize.s22, color: color);
+}
 
 TextStyle style_600_18(Color color) {
   return getSemiBoldStyle(fontSize: FontSize.s18, color: color);
@@ -111,7 +114,9 @@ TextStyle style_600_18(Color color) {
 TextStyle style_600_16(Color color) {
   return getSemiBoldStyle(fontSize: FontSize.s16, color: color);
 }
-
+TextStyle style_600_15(Color color) {
+  return getSemiBoldStyle(fontSize: FontSize.s15, color: color);
+}
 TextStyle style_600_14(Color color) {
   return getSemiBoldStyle(fontSize: FontSize.s14, color: color);
 }
@@ -119,7 +124,9 @@ TextStyle style_600_14(Color color) {
 TextStyle style_600_10(Color color) {
   return getSemiBoldStyle(fontSize: FontSize.s10, color: color);
 }
-
+TextStyle style_500_22(Color color) {
+  return getMediumStyle(fontSize: FontSize.s22, color: color);
+}
 TextStyle style_500_18(Color color) {
   return getMediumStyle(fontSize: FontSize.s18, color: color);
 }
@@ -164,6 +171,9 @@ TextStyle style_400_14(Color color) {
 
 TextStyle style_400_12(Color color) {
   return getRegularStyle(fontSize: FontSize.s12, color: color);
+}
+TextStyle style_400_10(Color color) {
+  return getRegularStyle(fontSize: FontSize.s10, color: color);
 }
 TextStyle style_400_8(Color color) {
   return getRegularStyle(fontSize: FontSize.s8, color: color);

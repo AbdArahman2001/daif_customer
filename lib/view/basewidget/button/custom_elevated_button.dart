@@ -12,8 +12,8 @@ final double? width;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width??MediaQuery.of(context).size.width * 0.8,
-      height: 42.h,
+      width: width??MediaQuery.of(context).size.width * 0.9,
+      height: 60.h,
       child: ElevatedButton(
         onPressed: onPressed,
         style: Theme.of(context).elevatedButtonTheme.style!.copyWith(

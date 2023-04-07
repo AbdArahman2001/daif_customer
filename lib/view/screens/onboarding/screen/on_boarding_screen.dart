@@ -2,6 +2,8 @@ import 'package:daif_customer/localization/my_localizations.dart';
 import 'package:daif_customer/utill/assets_manager.dart';
 import 'package:daif_customer/utill/styles_manager.dart';
 import 'package:daif_customer/utill/values_manager.dart';
+import 'package:daif_customer/view/basewidget/empty_app_bar.dart';
+import 'package:daif_customer/view/screens/account/screen/login_and_singup_screen.dart';
 import 'package:daif_customer/view/screens/onboarding/screen/single_on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -55,15 +57,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
       ImageAssets.onBoardingImg4,
     ];
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        toolbarHeight: 20.h,
-        systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: ColorManager.backgroundColor,
-          statusBarIconBrightness: Brightness.dark,
-        ),
-        backgroundColor: ColorManager.backgroundColor,
-      ),
+      appBar: const EmptyAppBar(),
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: [
@@ -75,7 +69,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                     CustomBackButton(onPressed:goPreviousPage ,),
+                    CustomBackButton(
+                      onPressed: goPreviousPage,
+                    ),
                     ElevatedButton(
                       onPressed: () {},
                       child: Text(locale.skip),
@@ -92,7 +88,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               Expanded(
                 child: PageView(
                   controller: pageController,
-                  onPageChanged: goNextPage,
+                  onPageChanged: changePage,
                   children: images
                       .map((image) => SingleOnBoardingView(
                           title: titles[images.indexOf(image)],
@@ -106,9 +102,16 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           Container(
             margin: EdgeInsets.only(bottom: 45.h),
             child: ElevatedButton(
-              onPressed: () => pageController.nextPage(
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeOut),
+              onPressed: () {
+                if (index + 1 == titles.length) {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const LoginAndSingUpScreen()));
+                } else {
+                  pageController.nextPage(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeOut);
+                }
+              },
               style: ElevatedButton.styleFrom(fixedSize: Size(220.w, 60.h)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -151,13 +154,13 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     );
   }
 
-  goNextPage(int index) {
+  changePage(int index) {
     this.index = index;
     setState(() {});
   }
-  goPreviousPage(){
+
+  goPreviousPage() {
     pageController.previousPage(
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeOut);
+        duration: const Duration(milliseconds: 300), curve: Curves.easeOut);
   }
 }

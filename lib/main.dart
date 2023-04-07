@@ -1,3 +1,6 @@
+import 'package:daif_customer/view/dashboard_screen.dart';
+import 'package:daif_customer/view/screens/account/screen/terms_and_conditions_screen.dart';
+import 'package:daif_customer/view/screens/booking/screen/booking_screen.dart';
 import 'package:daif_customer/view/screens/onboarding/screen/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -41,7 +44,7 @@ class MyApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
                 GlobalWidgetsLocalizations.delegate
               ],
-              home:  OnBoardingScreen(),
+              home:  const DashboardScreen(),
             ));
   }
 }

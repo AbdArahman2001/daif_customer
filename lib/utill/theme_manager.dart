@@ -9,12 +9,21 @@ import 'color_manager.dart';
 
 ThemeData getLightTheme() {
   return ThemeData(
-      // dashboard colors
+      // home colors
       primaryColor: ColorManager.primaryColor,
       accentColor: ColorManager.secondaryColor,
       scaffoldBackgroundColor: ColorManager.backgroundColor,
       splashColor: ColorManager.iconsColor,
       dialogBackgroundColor: ColorManager.whiteColor,
+      textTheme: TextTheme(
+          headlineSmall: style_400_14(ColorManager.blackTextColor),
+          headlineMedium: style_400_16(ColorManager.blackTextColor),
+          titleLarge: style_600_22(ColorManager.blackTextColor),
+          titleMedium: style_500_16(ColorManager.blackTextColor),
+          titleSmall: style_500_14(ColorManager.blackTextColor),
+          bodyMedium: style_400_12(const Color(0xFF707070)),
+        bodySmall: style_400_10(const Color(0xFF808C96),),
+      ),
       textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
               textStyle: style_500_16(ColorManager.primaryColor),
@@ -27,7 +36,6 @@ ThemeData getLightTheme() {
         selectedIconTheme: const IconThemeData(
           color: ColorManager.primaryColor,
         ),
-
         unselectedIconTheme: const IconThemeData(color: ColorManager.grey1),
         selectedItemColor: ColorManager.primaryColor,
         unselectedItemColor: ColorManager.grey1,
@@ -62,7 +70,7 @@ ThemeData getLightTheme() {
       // elevated button them
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-              textStyle: style_500_14(ColorManager.whiteColor),
+              textStyle: style_500_16(ColorManager.whiteColor),
               backgroundColor: ColorManager.primaryColor,
               disabledForegroundColor: ColorManager.disableColor,
               shape: RoundedRectangleBorder(
@@ -82,12 +90,13 @@ ThemeData getLightTheme() {
       // ),
 
       // input decoration theme (text form field)
+
       inputDecorationTheme: InputDecorationTheme(
         focusColor: ColorManager.blackTextColor,
         fillColor: ColorManager.whiteColor,
         hoverColor: ColorManager.grey1,
         contentPadding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
-        hintStyle: style_400_16(ColorManager.blackTextColor),
+        hintStyle: style_400_16(ColorManager.grey1),
         labelStyle: style_600_16(ColorManager.blackTextColor),
         errorStyle: style_400_12(ColorManager.errorColor),
         //prefixIconColor: ColorManager.greyScale_500,
@@ -122,7 +131,7 @@ ThemeData getLightTheme() {
 
 // ThemeData getDarkTheme() {
 //   return ThemeData(
-//     // dashboard colors
+//     // home colors
 //     primaryColor: ColorManager.yellow,
 //     accentColor: ColorManager.white2,
 //     splashColor: ColorManager.grey2,

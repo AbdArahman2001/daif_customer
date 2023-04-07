@@ -1,6 +1,6 @@
 // import 'dart:math' as math;
 //
-// import 'package:flutter/widgets.dart';
+// import 'package:flutter/widget.dart';
 //
 // class CustomLoader extends StatefulWidget {
 //   const CustomLoader({

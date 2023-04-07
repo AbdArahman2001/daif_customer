@@ -9,11 +9,12 @@ class CustomBackButton extends StatelessWidget {
 final VoidCallback? onPressed;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 40.w,
       height: 40.w,
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
+          padding: EdgeInsets.zero,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(ValuesManager.border),
             ),

@@ -2,7 +2,7 @@
 //
 // To perform an interaction with a widget in your test, use the WidgetTester
 // utility in the flutter_test package. For daif, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
+// gestures. You can also use WidgetTester to find child widget in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 import 'package:daif_customer/main.dart';
 import 'package:flutter/material.dart';
