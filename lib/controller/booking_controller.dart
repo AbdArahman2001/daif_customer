@@ -30,7 +30,7 @@ class BookingController extends GetxController {
      if (info[1] == (selectedMonth.index + 1).toString() &&
          info[2] == selectedYear.toString() &&
          info[3] == _selectedPeriod.toString()) {
-       selectedDaysAtSelectedMonth.add(int.parse(element[0]));
+       selectedDaysAtSelectedMonth.add(int.parse(info[0]));
      }
    }
  }
@@ -72,7 +72,7 @@ class BookingController extends GetxController {
       if (info[1] == (selectedMonth.index + 1).toString() &&
           info[2] == selectedYear.toString() &&
           info[3] == _selectedPeriod.toString()) {
-        bookedDaysAtMonth.add(element[0]);
+        bookedDaysAtMonth.add(info[0]);
       }
     }
   }

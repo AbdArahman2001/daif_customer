@@ -57,7 +57,7 @@ class _BookingCalendarWidgetState extends State<BookingCalendarWidget> {
                   height: 8.h,
                 ),
                 _MonthDaysGridWidget(
-                    monthDaysCount: controller.selectedMonth.getDaysCount(),
+                    monthDaysCount: controller.selectedMonth.getDaysCount(controller.selectedYear),
                     bookedDays: controller.bookedDaysAtMonth,
                     selectedDays: controller.selectedDaysAtSelectedMonth,
                     month: controller.selectedMonth.index + 1,
@@ -240,13 +240,13 @@ extension MonthExt on Month {
     }
   }
 
-  int getDaysCount() {
+  int getDaysCount(int year) {
     switch (this) {
       case Month.jan:
         return 31;
       case Month.feb:
-        return 30;
-
+        final bool isLeapYear = (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0);
+        return isLeapYear ? 29 : 28;
       case Month.mar:
         return 31;
 
