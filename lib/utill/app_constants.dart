@@ -4,8 +4,6 @@ class AppConstants {
   static const String APP_NAME = '6valley';
   static const String APP_VERSION = '1.0.0';
 
-  // static const String BASE_URL = 'http://admin-panel-car-tools.42web.io';
-  static const String BASE_URL = 'https://pr.pidelopahoy.com';
   static const String USER_ID = 'userId';
   static const String NAME = 'name';
   static const String CATEGORIES_URI = '/api/v1/categories';
